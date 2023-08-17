@@ -1,0 +1,20 @@
+{
+  "name": "ignorefile-merge",
+  "version": "1.0.0",
+  "description": "Merge .ignore files, including comments",
+  "keywords": [
+    ".gitignore",
+    ".npmignore",
+    "glob",
+    "ignore",
+    "merge"
+  ],
+  "repo": "keindev/ignorefile-merge",
+  "type": "utils",
+  "links": {
+    "homepage": "https://github.com/keindev/ignorefile-merge#readme",
+    "git": "https://github.com/keindev/ignorefile-merge",
+    "npm": "https://www.npmjs.com/package/ignorefile-merge"
+  },
+  "files": {}
+}
