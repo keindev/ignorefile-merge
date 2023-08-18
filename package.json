@@ -4,10 +4,7 @@
   "description": "Merge .ignore files, including comments",
   "license": "MIT",
   "homepage": "https://github.com/keindev/ignorefile-merge#readme",
-  "author": {
-    "name": "Daniil Ryazanov",
-    "email": "kein@tagproject.ru"
-  },
+  "author": "Daniil Ryazanov <kein@tagproject.ru>",
   "keywords": [
     ".gitignore",
     ".npmignore",
