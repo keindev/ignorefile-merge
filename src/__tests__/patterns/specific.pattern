@@ -1,6 +1,10 @@
 # My specific ignore pattern
 # public dotenv environment variable files
 .env
+.env
+.env
+.env
+.env
 .env.development.local
 .env.test.local
 .env.production.local
@@ -12,5 +16,11 @@ docs/
 
 # some cache
 cache1/
+.env
 cacheN/
 *.cache
+
+.env
+.env
+.env
+.env
