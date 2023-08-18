@@ -29,8 +29,12 @@ export default class BlockList {
         if (!row.length) comments = this.appendRows(comments, !!rows.length);
         else if (row.charAt(0) === '#') comments.push(row);
         else {
-          comments = this.appendRows(comments);
-          this.appendBlock({ content: row });
+          if (!this.#mapping.has(row)) {
+            comments = this.appendRows(comments);
+            this.appendBlock({ content: row });
+          } else {
+            comments = [];
+          }
         }
       }
     }
