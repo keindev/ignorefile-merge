@@ -1,6 +1,10 @@
-# :bug: Bug Fixes
+# :tada: Features
 
-- Fix duplicates removing in merged file [`df220e6`](https://github.com/keindev/ignorefile-merge/commit/df220e69f491791c14811df93da8f5cd60618d14)
+- Add multi merge [`8b190b0`](https://github.com/keindev/ignorefile-merge/commit/8b190b0b42f8817e68c5f5b2069395c6beca9f7c)
+
+# :memo: Internal changes
+
+- Remove dot in title [`de2212a`](https://github.com/keindev/ignorefile-merge/commit/de2212a1fa993e98c18b05f0235ae3663b1dff50)
 
 ---
 

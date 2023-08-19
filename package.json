@@ -1,6 +1,6 @@
 {
   "name": "ignorefile-merge",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Merge .ignore files, including comments",
   "license": "MIT",
   "homepage": "https://github.com/keindev/ignorefile-merge#readme",
