@@ -1,10 +1,15 @@
-# :tada: Features
+# Important Changes
 
-- Add multi merge [`8b190b0`](https://github.com/keindev/ignorefile-merge/commit/8b190b0b42f8817e68c5f5b2069395c6beca9f7c)
+## Dependencies
 
-# :memo: Internal changes
+<details>
+<summary>Dev Dependencies</summary>
 
-- Remove dot in title [`de2212a`](https://github.com/keindev/ignorefile-merge/commit/de2212a1fa993e98c18b05f0235ae3663b1dff50)
+- Changed **[@tagproject/ts-package-shared-config](https://www.npmjs.com/package/@tagproject/ts-package-shared-config)** from `^11.0.0` to `^11.0.1`
+- Removed **[@tagproject/docs-shared-config](https://www.npmjs.com/package/@tagproject/docs-shared-config)**, with `^3.0.0`
+- Removed **[@tagproject/vscode-shared-config](https://www.npmjs.com/package/@tagproject/vscode-shared-config)**, with `^3.0.0`
+
+</details>
 
 ---
 
