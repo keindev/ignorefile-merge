@@ -1,21 +1,28 @@
 import Block from './Block.js';
 
-const GENERATED_BLOCK_OPEN_ROW = '\n# !ignorefile-merge block-open';
-const GENERATED_BLOCK_CLOSE_ROW = '# !ignorefile-merge block-close\n';
-const GENERATED_PATTERN_EXPRESSION = /(# !ignorefile-merge block-open)[\S\s]+(# !ignorefile-merge block-close)/gm;
-const GENERATED_BLOCK_MESSAGE = [
+const BLOCK_OPEN = '# !ignorefile-merge block-open';
+const BLOCK_CLOSE = '# !ignorefile-merge block-close';
+const BLOCK_MESSAGE = [
   '# ---------------------------------------------------------------',
   '# This block generated automatically',
   '# @see https://www.npmjs.com/package/ignorefile-merge',
   '# ---------------------------------------------------------------',
 ].join('\n');
 
+export interface IBlockListOptions {
+  name?: string;
+  replace?: boolean;
+}
+
 export default class BlockList {
   #blocks: Block[] = [];
   #mapping = new Map<string, Block>();
+  #name: string | undefined;
 
-  constructor(content: string, replaceGeneratedBlock?: boolean) {
-    const rows = (replaceGeneratedBlock ? content.replace(GENERATED_PATTERN_EXPRESSION, '') : content)
+  constructor(content: string, options?: IBlockListOptions) {
+    this.#name = options?.name;
+
+    const rows = this.replaceBlock(content, !!options?.replace)
       .split('\n')
       .map(row => row.trim())
       .reverse();
@@ -52,10 +59,10 @@ export default class BlockList {
 
   join(wrap?: boolean): string {
     const content = this.#blocks.map(block => block.content).join('\n');
+    const openLine = this.#name ? `${BLOCK_OPEN} ${this.#name}` : BLOCK_OPEN;
+    const closeLine = this.#name ? `${BLOCK_CLOSE} ${this.#name}` : BLOCK_CLOSE;
 
-    return wrap
-      ? [GENERATED_BLOCK_OPEN_ROW, GENERATED_BLOCK_MESSAGE, '', content, '', GENERATED_BLOCK_CLOSE_ROW].join('\n')
-      : content;
+    return wrap ? ['', openLine, BLOCK_MESSAGE, '', content, '', closeLine, ''].join('\n') : content;
   }
 
   private appendBlock({ content, mapped = true }: { content: string; mapped?: boolean }): void {
@@ -82,5 +89,19 @@ export default class BlockList {
     const lastBlock = this.#blocks[this.#blocks.length - 1];
 
     if (!lastBlock?.isMapped && !lastBlock?.content) this.#blocks.pop();
+  }
+
+  private replaceBlock(content: string, replace: boolean): string {
+    let result = content;
+
+    if (replace) {
+      const pattern = this.#name
+        ? `(${BLOCK_OPEN} ${this.#name})[\\S\\s]+(${BLOCK_CLOSE} ${this.#name})`
+        : `(${BLOCK_OPEN})[\\S\\s]+(${BLOCK_CLOSE})`;
+
+      result = content.replace(new RegExp(pattern, 'gm'), '');
+    }
+
+    return result;
   }
 }

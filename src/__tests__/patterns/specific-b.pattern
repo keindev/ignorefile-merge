@@ -1,0 +1,8 @@
+# My specific ignore pattern 2
+# public dotenv environment variable files
+.env.local
+!.env.test.public
+
+# docs
+docs/
+media/
