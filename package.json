@@ -1,6 +1,6 @@
 {
   "name": "ignorefile-merge",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Merge .ignore files, including comments",
   "license": "MIT",
   "homepage": "https://github.com/keindev/ignorefile-merge#readme",
@@ -46,8 +46,6 @@
     "test:jest": "node --experimental-vm-modules node_modules/.bin/jest"
   },
   "devDependencies": {
-    "@tagproject/docs-shared-config": "^3.0.0",
-    "@tagproject/ts-package-shared-config": "^11.0.0",
-    "@tagproject/vscode-shared-config": "^3.0.0"
+    "@tagproject/ts-package-shared-config": "^11.0.1"
   }
 }

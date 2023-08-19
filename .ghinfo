@@ -1,6 +1,6 @@
 {
   "name": "ignorefile-merge",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Merge .ignore files, including comments",
   "keywords": [
     ".gitignore",
