@@ -1,7 +1,7 @@
 export default class Block {
-  #content: undefined | string = undefined;
-  #ignore = false;
-  #mapped = false;
+  readonly #content: undefined | string = undefined;
+  #ignore: boolean = false;
+  readonly #mapped: boolean = false;
 
   constructor(content?: string, mapped?: boolean) {
     this.#content = content;

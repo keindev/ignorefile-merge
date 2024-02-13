@@ -5,11 +5,13 @@
 <details>
 <summary>Dev Dependencies</summary>
 
-- Changed **[@tagproject/ts-package-shared-config](https://www.npmjs.com/package/@tagproject/ts-package-shared-config)** from `^11.0.0` to `^11.0.1`
-- Removed **[@tagproject/docs-shared-config](https://www.npmjs.com/package/@tagproject/docs-shared-config)**, with `^3.0.0`
-- Removed **[@tagproject/vscode-shared-config](https://www.npmjs.com/package/@tagproject/vscode-shared-config)**, with `^3.0.0`
+- Changed **[@tagproject/ts-package-shared-config](https://www.npmjs.com/package/@tagproject/ts-package-shared-config)** from `^11.0.1` to `^11.0.4`
 
 </details>
+
+# :memo: Internal changes
+
+- Fix lint warnings [`d088cd2`](https://github.com/keindev/ignorefile-merge/commit/d088cd2b660df90c8555fd368f43598c2e4e3303)
 
 ---
 

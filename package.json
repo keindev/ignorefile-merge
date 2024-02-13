@@ -1,13 +1,10 @@
 {
   "name": "ignorefile-merge",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Merge .ignore files, including comments",
   "license": "MIT",
   "homepage": "https://github.com/keindev/ignorefile-merge#readme",
-  "author": {
-    "name": "Daniil Ryazanov",
-    "email": "kein@tagproject.ru"
-  },
+  "author": "Daniil Ryazanov <kein@tagproject.ru>",
   "keywords": [
     ".gitignore",
     ".npmignore",
@@ -46,6 +43,6 @@
     "test:jest": "node --experimental-vm-modules node_modules/.bin/jest"
   },
   "devDependencies": {
-    "@tagproject/ts-package-shared-config": "^11.0.1"
+    "@tagproject/ts-package-shared-config": "^11.0.4"
   }
 }
