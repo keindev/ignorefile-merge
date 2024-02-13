@@ -15,9 +15,9 @@ export interface IBlockListOptions {
 }
 
 export default class BlockList {
-  #blocks: Block[] = [];
-  #mapping = new Map<string, Block>();
-  #name: string | undefined;
+  readonly #blocks: Block[] = [];
+  readonly #mapping = new Map<string, Block>();
+  readonly #name: string | undefined;
 
   constructor(content: string, options?: IBlockListOptions) {
     this.#name = options?.name;
